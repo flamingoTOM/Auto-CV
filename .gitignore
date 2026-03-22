@@ -11,3 +11,7 @@
 *.blg
 *.bcf
 *.run.xml
+
+# 个人数据文件（隐私，不提交）
+*.txt
+tmp_txt/
