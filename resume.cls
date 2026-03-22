@@ -121,11 +121,20 @@
 	#1 \par                                         % Entry 
 }
 
-\newcommand{\Content}[3]{
+\newcommand{\Content}[3]{  % 3个参数
     \begin{itemize}[parsep=0.5ex]
-    \item \textit{描述}：#1
-    \item \textit{我的职责}：#2
-    \item \textit{成果}：#3
+    % \songti 命令指定内容为宋体，覆盖默认或斜体的字体样式
+    \item \songti #1
+    \item \songti #2
+    \item \songti #3
     \end{itemize}
-	\normalsize \par
+    \normalsize \par
+}
+
+\newcommand{\Contenttwo}[2]{  % 2个参数
+    \begin{itemize}[parsep=0.5ex]
+    \item \songti #1
+    \item \songti #2
+    \end{itemize}
+    \normalsize \par
 }
