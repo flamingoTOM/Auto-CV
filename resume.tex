@@ -1,0 +1,89 @@
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%***"%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
+%***使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
+%***修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
+
+%在大括号内填写其他信息，最多填写4个，但是如果选择不填信息，
+%那么大括号必须空着不写，而不能删除大括号。
+%\otherInfo后面的四个大括号里的所有信息都会在一行输出
+%如果想要写两行，那就用两次这个指令（\otherInfo{}{}{}{}）即可
+
+
+%***********个人信息**************
+\MyName{XXX}
+\sepspace
+\SimpleEntry{XXX国家重点实验室}
+\SimpleEntry{xxx@gmail.com}
+\SimpleEntry{18800000057}
+\SimpleEntry{\href{https://doublelll3.ml}{个人主页：https://doublelll3.ml}}
+
+%************照片**************
+%照片需要放到images文件夹下，名字必须是you.jpg，注意.jpg后缀（可以去resume.cls第101行处修改），如果不需要照片可以不添加此行命令
+%0.15的意思是，照片的宽度是页面宽度的0.15倍，调整大小，避免遮挡文字
+\yourphoto{0.14}
+
+%***********教育背景**************
+\section{教育背景}
+%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
+%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
+\datedsubsection{\textbf{xxxx大学}，xxxxx及控制，\textit{硕士}}{2018.9 - 2021.7}
+\datedsubsection{\textbf{xxxx大学}，xxxxxx及控制，\textit{本科}}{2014.9 - 2018.7}
+\begin{itemize}
+  \item xxxx奖学金 * 3、xxxx奖学金 * 1、校三好学生 * 3
+\end{itemize}
+
+%***********过往经历**************
+\section{过往经历}
+\datedsubsection{\textbf{xxxx公司（实习）}，xx工程师}{2020.6 - 2020.9}
+\Content
+{针对xxxx，实时检测xxxx情况（主要负责人）。}
+{研究xxx算法、xxxx算法以及两者的结合。}
+{完成xxxx与xxx的结合，在xxxx，目前已上线使用。}
+
+\datedsubsection{\textbf{xxx研究院（实习）}，xxxx实习生}{2020.1 - 2020.5}
+\Content
+{负责xxx项目，对xxx进行智能诊断。}
+{搭建xxx网站，结合xxx，利用xxx，基于xxx实现xxx。}
+{1.完成xxx；2.基于xxx，算法准确率在85\%左右。}
+
+\datedsubsection{\textbf{xxx大学研究生课题}，xxx}{2018.3 - 至今}
+\Content
+{针对xxx的不足，研究一种基于xxx对xxx进行xxx的方法。}
+{基于xxx建立xxx模型，使xxx，基于xxx，设计一种xxx。}
+{1.建立了xxx，并在xxx得到了验证；2.对xxx，算法准确率在95\%以上；3.对xxx可以自主学习，从而xxx。}
+
+\datedsubsection{\textbf{大学生创新创业项目}，xxx}{2016.3 - 2017.3}
+\Content
+{针对xxx，基于xxx，加入xx实现了xxx的功能（主要负责人）。}
+{搭建xxx，利用xxx的输出，实现对xxx的控制。}
+{1.实现了xxx；2.获得了xxx奖等荣誉。}
+
+\section{专业技能}
+\datedsubsection{\textbf{计算机方面}：xxx}{}
+\datedsubsection{\textbf{算法方面}：xxx}{}
+\datedsubsection{\textbf{英语方面}：xxx}{}
+\sepspace
+
+\section{奖励荣誉}
+\datedsubsection{\textbf{比赛方面}:}{}
+\datedsubsection{xxx}{2020}
+\datedsubsection{xxx}{2020}
+\datedsubsection{xxx}{2017}
+\datedsubsection{\textbf{论文方面}：xxx}{2020}
+\datedsubsection{\textbf{运动方面}：xxx}{2018、2019}
+
+\end{document}

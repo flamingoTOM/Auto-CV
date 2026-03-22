@@ -1,0 +1,13 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.dvi
+*.bbl
+*.blg
+*.bcf
+*.run.xml
