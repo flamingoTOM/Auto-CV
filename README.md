@@ -41,13 +41,38 @@ Auto-CV/
 
 ## Quick Start in 3 minutes 三分钟快速开始
 
-1. 推荐使用 VS Code 打开项目
+### 第 0 步：安装依赖（首次使用）
+
+**1. 安装 MiKTeX（LaTeX 编译环境）**
+
+```bash
+winget install --id MiKTeX.MiKTeX -e --accept-source-agreements --accept-package-agreements
+```
+
+安装完成后**重启终端**，再运行以下命令预装所有宏包（只需一次，全程无弹框）：
+
+```bash
+bash .claude/skills/Auto-CV/shell/install-packages.sh
+```
+
+**2. 安装 VS Code 插件**
+
+在 VS Code 扩展面板搜索并安装以下两个插件：
+
+| 插件 | 作者 | 说明 |
+|------|------|------|
+| **LaTeX** | Mathematic Inc | LaTeX 语言支持 |
+| **LaTeX Workshop** | James Yu | 实时预览、编译、语法高亮 |
+
+---
+
+### 第 1 步：克隆项目
 
 ```
 git clone https://github.com/flamingoTOM/Auto-CV.git
 ```
 
-2. 使用 `/Auto-CV` 技能
+### 第 2 步：使用 `/Auto-CV` 技能
 
 在 [Claude Code](https://github.com/anthropics/claude-code) 项目目录下运行：
 
@@ -72,7 +97,9 @@ git clone https://github.com/flamingoTOM/Auto-CV.git
 > 也可将原始信息写入 `.txt` 文件，通过 `/Auto-CV 参考 xxx.txt` 的方式批量导入。
 
 
-3. 查看pdf
+### 第 3 步：查看 PDF
+
+编译完成后，用 LaTeX Workshop 的预览功能或直接打开 `resume.pdf` 查看效果。
 
 
 ---
