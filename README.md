@@ -49,7 +49,7 @@ Auto-CV/
 winget install --id MiKTeX.MiKTeX -e --accept-source-agreements --accept-package-agreements
 ```
 
-安装完成后**重启终端**，再运行以下命令预装所有宏包（只需一次，全程无弹框）：
+安装完成后**重启终端**，再运行以下命令预装所有宏包：
 
 ```bash
 bash .claude/skills/Auto-CV/shell/install-packages.sh
@@ -82,15 +82,7 @@ git clone https://github.com/flamingoTOM/Auto-CV.git
 
 技能将分 **7 个步骤**引导填写简历：
 
-| 步骤 | 内容 |
-|------|------|
-| 第一步 | 个人信息（姓名、籍贯、邮箱、电话、政治面貌、通讯地址）|
-| 第二步 | 教育背景（学校、专业、学历、时间）|
-| 第三步 | 照片（是否添加）|
-| 第四步 | 实习经历（STAR 原则，时间倒序）|
-| 第五步 | 项目经历（支持奖项，时间倒序）|
-| 第六步 | 学生工作（1-3 段）|
-| 第七步 | 个人评价（英文水平、技术栈、爱好，3-8 条）|
+
 
 每步填写完毕后自动更新 `resume.tex`，全部完成后可直接编译输出 PDF。
 
@@ -100,24 +92,13 @@ git clone https://github.com/flamingoTOM/Auto-CV.git
 ### 第 3 步：查看 PDF
 
 编译完成后，用 LaTeX Workshop 的预览功能或直接打开 `resume.pdf` 查看效果。
+![alt text](pic/img_2.jpeg)
 
 
 ---
 
 
-## 主要 LaTeX 命令
 
-| 命令 | 说明 |
-|------|------|
-| `\MyName{姓名}` | 简历大标题 |
-| `\SimpleEntry{内容}` | 个人信息单行条目 |
-| `\section{节名}` | 大节标题（教育背景、实习经历等）|
-| `\datedsubsection{左对齐内容}{右对齐时间}` | 带时间的子节标题 |
-| `\Content{条目1}{条目2}{条目3}` | 三点式内容列表 |
-| `\Contenttwo{条目1}{条目2}` | 两点式内容列表 |
-| `\yourphoto{0.14}` | 插入照片（数值为页面宽度比例）|
-
----
 
 
 
