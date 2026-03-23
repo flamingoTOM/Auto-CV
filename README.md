@@ -1,6 +1,6 @@
-# Auto-CV
+# ACV:Auto-Curriculum-Vitae
 
-一个基于 LaTeX 的中文简历模板，配合 Claude Code 的 `/Auto-CV` 对话式技能，实现**全程问答填写、自动生成 PDF**。
+一个基于 LaTeX 的中文简历模板，配合 Claude Code 的 `/Auto-CV` 对话式技能，实现**自然语言描述、生成简历 PDF**。
 
 ---
 
@@ -37,13 +37,7 @@ Auto-CV/
 
 ## 快速开始
 
-### 方式一：Overleaf（推荐，无需本地环境）
-
-1. 将项目文件夹打包为 `.zip` 上传至 [Overleaf](https://www.overleaf.com)
-2. 编译器设置为 **XeLaTeX**
-3. 编辑 `resume.tex`，点击 **Recompile** 即可预览
-
-### 方式二：本地编译
+### 本地编译
 
 **依赖：** MiKTeX 或 TeX Live（需包含 XeLaTeX）
 

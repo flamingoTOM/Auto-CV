@@ -2,7 +2,9 @@
 
 ## 技能说明
 
-本技能通过对话式问答，引导用户逐步填写简历信息，并自动更新 `resume.tex` 文件，生成一份完整的专业简历。工作内容描述采用 **STAR 原则**（Situation/Task → Action → Result）进行优化。
+本技能通过对话式问答，引导用户逐步填写简历信息。
+每执行完一步，自动更新 `resume.tex` 文件，编译渲染出简历PDF。
+工作内容描述采用 **STAR 原则**（Situation/Task → Action → Result）进行优化。
 
 ---
 
@@ -12,6 +14,36 @@
 > "您好！我是晓煜开发的简历机器人，我将分 7 个步骤引导您完成简历，现在开始"
 
 逐步完成以下各步骤，**每步收集完毕后立即更新 `resume.tex`，再进入下一步**。
+
+---
+
+### 第零步：环境检查（自动，无需用户操作）
+
+在进入第一步之前，先静默检查 XeLaTeX 是否可用：
+
+```bash
+xelatex --version
+```
+
+**若命令成功**：直接进入第一步，无需提示用户。
+
+**若命令失败（未安装）**：
+1. 告知用户：「检测到您尚未安装 LaTeX 编译环境，正在为您自动安装 MiKTeX，请稍候……」
+2. 执行安装（使用 Windows 内置的 winget）：
+   ```bash
+   winget install --id MiKTeX.MiKTeX -e --accept-source-agreements --accept-package-agreements
+   ```
+3. 安装完成后，刷新环境变量并再次验证：
+   ```bash
+   refreshenv 2>/dev/null || true
+   xelatex --version
+   ```
+4. **若验证成功**：告知用户「MiKTeX 安装完成！」，进入第一步。
+5. **若仍然失败**：提示用户手动安装：
+   > 「自动安装未能生效（可能需要重启终端）。请访问 https://miktex.org/download 手动下载安装，安装完成后重新运行 `/Auto-CV`。」
+   然后**终止本次执行**。
+
+> 注意：winget 在 Windows 10 1709+ 及 Windows 11 上默认可用。若 winget 本身不存在，改为提示手动安装。
 
 ---
 
@@ -148,5 +180,10 @@
 ## 完成后
 
 1. 展示更新后 `resume.tex` 的关键部分供用户确认
-2. 提示用户使用 Overleaf 或本地 LaTeX 编译器编译，查看最终 PDF
+2. 自动执行编译：
+   ```bash
+   bash build.sh
+   ```
+   - **编译成功**：告知用户「✓ resume.pdf 已生成，可直接打开查看！」
+   - **编译失败**：展示错误信息，提示用户检查 LaTeX 语法或联系开发者
 3. 询问用户是否需要调整任何部分
