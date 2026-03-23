@@ -13,8 +13,8 @@
 
 2. 交互式自然语言描述制作简历
 
-<img src="pic/slide-2.png" width="48%" />
-<img src="pic/slide-3.png" width="48%" />
+<img src="pic/slide-2.png" width="45%" />
+<img src="pic/slide-3.png" width="45%" />
 
 ---
 
