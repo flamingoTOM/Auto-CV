@@ -48,7 +48,12 @@
 xelatex --version
 ```
 
-**若命令成功**：直接进入第一步，无需提示用户。
+**若命令成功**：检查宏包是否已初始化，然后进入第一步。
+
+```bash
+# 静默运行宏包安装（已安装的会自动跳过，不影响速度）
+bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
+```
 
 **若命令失败（未安装）**：
 
@@ -60,13 +65,17 @@ xelatex --version
      ```
    - **若无 winget**：跳到步骤4，提示手动安装
 3. 安装完成后，告知用户：
-   > 「MiKTeX 安装完成！**请重启终端后再次运行 `/Auto-CV`**（或者直接运行 `bash build.sh` 编译简历）。」
+   > 「MiKTeX 安装完成！**请重启终端，然后运行以下命令完成初始化：**
+   > ```bash
+   > bash .claude/skills/Auto-CV/shell/install-packages.sh
+   > ```
+   > 初始化完成后再次运行 `/Auto-CV` 即可。」
 4. **终止本次执行**，让用户重启终端后再来。
 
 > **重要说明**：
 > - winget 在 Windows 10 1709+ 及 Windows 11 上默认可用
 > - MiKTeX 安装后需要**重启终端**才能生效，这是 LaTeX 生态的限制
-> - 之后运行 `bash build.sh` 时，缺失的宏包（如 titlesec 等）会自动下载安装，**无需用户点击确认**
+> - `install-packages.sh` 会配置静默安装模式并预装所有宏包，**彻底杜绝弹框**
 
 ---
 
@@ -205,7 +214,7 @@ xelatex --version
 1. 展示更新后 `resume.tex` 的关键部分供用户确认
 2. 自动执行编译：
    ```bash
-   bash build.sh
+   bash .claude/skills/Auto-CV/shell/build.sh
    ```
    - **编译成功**：告知用户「✓ resume.pdf 已生成，可直接打开查看！」
    - **编译失败**：展示错误信息，检查是否需要安装/更新 MiKTeX

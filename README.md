@@ -9,7 +9,7 @@ Auto - CV 可以做什么？
 2. 导入已有 PDF 简历：将自己的旧简历（.pdf）放入 `/cv` 文件夹，自动提取内容并转换
 
 ---
-![alt text](image.png)
+![alt text](pic/img_1.jpg)
 
 ---
 
@@ -23,7 +23,6 @@ Auto - CV 可以做什么？
 Auto-CV/
 ├── resume.tex              # 简历主文件（编辑此文件）
 ├── resume.cls              # 自定义文档类（排版逻辑）
-├── build.sh                # 本地一键编译脚本
 ├── images/
 │   └── you.jpg             # 简历照片（替换为本人照片）
 ├── fonts/                  # 内嵌字体（XeLaTeX 使用）
@@ -31,9 +30,11 @@ Auto-CV/
 ├── linespacing_fix.sty     # 行距修正
 ├── zh_CN-Adobefonts_*.sty  # 中文字体配置
 └── .claude/
-    └── skills/
-        └── Auto-CV/
-            └── SKILL.md    # /Auto-CV 技能定义
+    └── skills/Auto-CV/
+        ├── skill.md        # /Auto-CV 技能定义
+        └── shell/
+            ├── build.sh            # 本地一键编译脚本
+            └── install-packages.sh # 首次使用宏包安装脚本
 ```
 
 ---
