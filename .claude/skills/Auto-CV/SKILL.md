@@ -86,12 +86,13 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 2. **籍贯**（必要，如陕西省西安市） 
 3. **邮箱**（必要）
 4. **电话**（必要）
-5. **政治面貌**（非必要，如：中共党员、共青团员、群众）
+5. **政治面貌**（非必要）
 6. **通讯地址**（非必要）
-7. **个人主页**（非必要，如GitHub、简书等）
+7. **个人主页**（非必要）
 8. **作品集链接**（非必要）
 
 更新 `resume.tex` 中 `\MyName{}` 及各 `\SimpleEntry{\textbf{xxx：}xxx}` 字段。
+用户没有的项目，直接删掉
 
 ---
 
@@ -127,7 +128,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 
 处理方式：
 1. 将工作内容精炼为 **20-30 字**，写入 `{工作内容：xxx}`
-2. 用 STAR 原则扩展为 **2-3 点**，每点 **30-60 字**，配上一些可以量化的数据，写入 `\Content` 下方各 `{ 1.xxx}` `{ 2.xxx}` `{ 3.xxx}`
+2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-50 字**，配上一些可以量化的数据，写入 `\Content` 下方各 `{ 1.xxx}` `{ 2.xxx}` `{ 3.xxx}`
 3. 时间倒叙排列，最新的实习经历排在最前面
 
 输出格式：
@@ -135,9 +136,15 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 \datedsubsection{\textbf{公司名称（实习）}，岗位}{开始 - 结束}
 {工作内容：精炼后20-30字描述}
 \Content
-{ STAR第一点，30-60字}
-{ STAR第二点，30-60字}
-{ STAR第三点，30-60字（如有）}
+{ STAR第一点，字+字符不能超过50}
+{ STAR第二点，字+字符不能超过50}
+{ STAR第三点，字+字符不能超过50}
+ 
+如果只有两点：
+\Contenttwo
+{ STAR第一点，字+字符不能超过50}
+{ STAR第二点，字+字符不能超过50}
+
 ```
 
 ---
@@ -152,7 +159,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 
 处理方式：
 1. 将工作内容精炼为 **20-30 字**，写入 `{工作内容：xxx}`
-2. 用 STAR 原则扩展为 **2-3 点**，每点 **30-60 字**，配上一些可以量化的数据，写入 `\Content` 下方
+2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-50 字**，配上一些可以量化的数据，写入 `\Content` 下方
 3. 时间倒叙排列，最新的项目经历排在最前面
 
 输出格式：
@@ -160,9 +167,14 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 \datedsubsection{\textbf{项目名称}，奖项（如有）}{开始 - 结束}
 {工作内容：精炼后20-30字描述}
 \Content
-{ STAR第一点，30-60字}
-{ STAR第二点，30-60字}
-{ STAR第三点，30-60字（如有）}
+{ STAR第一点，字+字符不能超过50}
+{ STAR第二点，字+字符不能超过50}
+{ STAR第三点，字+字符不能超过50}
+ 
+如果只有两点：
+\Contenttwo
+{ STAR第一点，字+字符不能超过50}
+{ STAR第二点，字+字符不能超过50}
 ```
 
 ---
@@ -195,7 +207,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 - **爱好特长**（可选）
 - **其他补充**（可自由拓展）
 
-综合以上信息，写 **3-5 点**个人评价，每点 **30-45 字**，适度自由发挥，更新 `\section{个人评价}` 下的内容。
+综合以上信息，写 **3-5 点**个人评价，每点 **30-45 字**，一定不能超过45字，更新 `\section{个人评价}` 下的内容。
 
 输出格式（每点用 `\SimpleEntry` 或直接段落）：
 ```latex
