@@ -51,22 +51,22 @@ xelatex --version
 **若命令成功**：直接进入第一步，无需提示用户。
 
 **若命令失败（未安装）**：
-1. 告知用户：「检测到您尚未安装 LaTeX 编译环境，正在为您自动安装 MiKTeX，请稍候……」
-2. 执行安装（使用 Windows 内置的 winget）：
-   ```bash
-   winget install --id MiKTeX.MiKTeX -e --accept-source-agreements --accept-package-agreements
-   ```
-3. 安装完成后，刷新环境变量并再次验证：
-   ```bash
-   refreshenv 2>/dev/null || true
-   xelatex --version
-   ```
-4. **若验证成功**：告知用户「MiKTeX 安装完成！」，进入第一步。
-5. **若仍然失败**：提示用户手动安装：
-   > 「自动安装未能生效（可能需要重启终端）。请访问 https://miktex.org/download 手动下载安装，安装完成后重新运行 `/Auto-CV`。」
-   然后**终止本次执行**。
 
-> 注意：winget 在 Windows 10 1709+ 及 Windows 11 上默认可用。若 winget 本身不存在，改为提示手动安装。
+1. 告知用户：「检测到您尚未安装 LaTeX 编译环境，正在为您自动安装 MiKTeX...」
+2. 检查是否有 winget：
+   - **若有 winget**：执行安装
+     ```bash
+     winget install --id MiKTeX.MiKTeX -e --accept-source-agreements --accept-package-agreements
+     ```
+   - **若无 winget**：跳到步骤4，提示手动安装
+3. 安装完成后，告知用户：
+   > 「MiKTeX 安装完成！**请重启终端后再次运行 `/Auto-CV`**（或者直接运行 `bash build.sh` 编译简历）。」
+4. **终止本次执行**，让用户重启终端后再来。
+
+> **重要说明**：
+> - winget 在 Windows 10 1709+ 及 Windows 11 上默认可用
+> - MiKTeX 安装后需要**重启终端**才能生效，这是 LaTeX 生态的限制
+> - 之后运行 `bash build.sh` 时，缺失的宏包（如 titlesec 等）会自动下载安装，**无需用户点击确认**
 
 ---
 
@@ -208,5 +208,5 @@ xelatex --version
    bash build.sh
    ```
    - **编译成功**：告知用户「✓ resume.pdf 已生成，可直接打开查看！」
-   - **编译失败**：展示错误信息，提示用户检查 LaTeX 语法或联系开发者
+   - **编译失败**：展示错误信息，检查是否需要安装/更新 MiKTeX
 3. 询问用户是否需要调整任何部分
