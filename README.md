@@ -1,16 +1,9 @@
-# ACV:Auto-Curriculum-Vitae
+# Auto - CV ：自然语言描述的简历助手
 
 一个基于 LaTeX 的中文简历模板，配合 Claude Code 的 `/Auto-CV` 对话式技能，实现**自然语言描述、生成简历 PDF**。
 
 ---
-
-## 功能特点
-
-- **中文排版**：基于 XeLaTeX + Adobe 字体，支持宋体正文与粗体标题
-- **照片支持**：可选头像，自动布局不遮挡内容
-- **结构化模板**：教育背景、实习经历、项目经历、学生工作、个人评价，层次清晰
-- **STAR 原则**：工作内容自动按 Situation→Action→Result 三段式展开
-- **`/Auto-CV` 技能**：Claude Code 对话引导，分 7 步完成简历填写并实时更新 `.tex` 文件
+![alt text](image.png)
 
 ---
 
@@ -35,7 +28,7 @@ Auto-CV/
 
 ---
 
-## 快速开始
+## quick start in 3 minutes 三分钟快速开始
 
 ### 本地编译
 
@@ -89,13 +82,7 @@ bash build.sh
 
 ---
 
-## 注意事项
 
-- 照片文件名必须为 `you.jpg`，放入 `images/` 文件夹
-- 不需要照片时，在 `\yourphoto{0.14}` 行前加 `%` 注释掉
-- 个人信息类 `.txt` 文件建议加入 `.gitignore`，避免隐私数据上传
-
----
 
 ## License
 
