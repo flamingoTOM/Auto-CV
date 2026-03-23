@@ -81,7 +81,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 
 ### 第一步：个人信息
 
-依次询问：
+同时询问：
 1. **姓名**（必要）
 2. **籍贯**（必要，如陕西省西安市） 
 3. **邮箱**（必要）
@@ -128,7 +128,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 
 处理方式：
 1. 将工作内容精炼为 **20-30 字**，写入 `{工作内容：xxx}`
-2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-50 字**，配上一些可以量化的数据，写入 `\Content` 下方各 `{ 1.xxx}` `{ 2.xxx}` `{ 3.xxx}`
+2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-60 字**，配上一些可以量化的数据，写入 `\Content` 下方各 `{ 1.xxx}` `{ 2.xxx}` `{ 3.xxx}`
 3. 时间倒叙排列，最新的实习经历排在最前面
 
 输出格式：
@@ -136,15 +136,14 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 \datedsubsection{\textbf{公司名称（实习）}，岗位}{开始 - 结束}
 {工作内容：精炼后20-30字描述}
 \Content
-{ STAR第一点，字+字符不能超过50}
-{ STAR第二点，字+字符不能超过50}
-{ STAR第三点，字+字符不能超过50}
+{ STAR第一点，字+字符不能超过60 ；}
+{ STAR第二点，字+字符不能超过60 ;}
+{ STAR第三点，字+字符不能超过60 。}
  
 如果只有两点：
 \Contenttwo
-{ STAR第一点，字+字符不能超过50}
-{ STAR第二点，字+字符不能超过50}
-
+{ STAR第一点，字+字符不能超过60 ；}
+{ STAR第二点，字+字符不能超过60 。}
 ```
 
 ---
@@ -159,7 +158,7 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 
 处理方式：
 1. 将工作内容精炼为 **20-30 字**，写入 `{工作内容：xxx}`
-2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-50 字**，配上一些可以量化的数据，写入 `\Content` 下方
+2. 用 STAR 原则扩展为 **2-3 点**，每点 **40-60- 字**，配上一些可以量化的数据，写入 `\Content` 下方
 3. 时间倒叙排列，最新的项目经历排在最前面
 
 输出格式：
@@ -167,14 +166,14 @@ bash .claude/skills/Auto-CV/shell/install-packages.sh 2>/dev/null || true
 \datedsubsection{\textbf{项目名称}，奖项（如有）}{开始 - 结束}
 {工作内容：精炼后20-30字描述}
 \Content
-{ STAR第一点，字+字符不能超过50}
-{ STAR第二点，字+字符不能超过50}
-{ STAR第三点，字+字符不能超过50}
+{ STAR第一点，字+字符不能超过60 ；}
+{ STAR第二点，字+字符不能超过60 ;}
+{ STAR第三点，字+字符不能超过60 。}
  
 如果只有两点：
 \Contenttwo
-{ STAR第一点，字+字符不能超过50}
-{ STAR第二点，字+字符不能超过50}
+{ STAR第一点，字+字符不能超过60 ；}
+{ STAR第二点，字+字符不能超过60 。}
 ```
 
 ---

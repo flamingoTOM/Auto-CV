@@ -2,18 +2,19 @@
 
 一个基于 LaTeX 的中文简历模板，配合 Claude Code 的 `/Auto-CV` 对话式技能，实现**自然语言描述、生成简历 PDF**。
 
-Auto - CV 可以做什么？
+**Auto - CV 可以做什么？**
 
-1. 交互式自然语言描述制作简历（推荐）
-
-2. 导入已有 PDF 简历：将自己的旧简历（.pdf）放入 `/cv` 文件夹，自动提取内容并转换
-
+1. 导入简历，自动提取内容并转换
 ---
 ![alt text](pic/img_1.jpg)
 
+> 本模板参考自 [Overleaf 中文简历模板](https://www.overleaf.com/latex/templates/zhong-wen-jian-li-mo-ban-chinese-resume-template/jgdzmymxmpfc)
 ---
 
-> 本模板参考自 [Overleaf 中文简历模板](https://www.overleaf.com/latex/templates/zhong-wen-jian-li-mo-ban-chinese-resume-template/jgdzmymxmpfc)
+2. 交互式自然语言描述制作简历
+
+<img src="pic/slide-2.png" width="49%" />
+<img src="pic/slide-3.png" width="49%" />
 
 ---
 
