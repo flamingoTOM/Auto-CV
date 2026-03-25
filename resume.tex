@@ -1,113 +1,90 @@
 \documentclass{resume}
-\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{zh_CN-Adobefonts_external}
 \usepackage{linespacing_fix}
 \usepackage{cite}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=cyan,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=blue,
 }
 
 \begin{document}
 \pagenumbering{gobble}
 
-%***"%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
-%***使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
-%***修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
-
-%在大括号内填写其他信息，最多填写4个，但是如果选择不填信息，
-%那么大括号必须空着不写，而不能删除大括号。
-%\otherInfo后面的四个大括号里的所有信息都会在一行输出
-%如果想要写两行，那就用两次这个指令（\otherInfo{}{}{}{}）即可
-
-
 %***********个人信息**************
-\MyName{XXX}
+\MyName{刘晓煜}
 \sepspace
-\SimpleEntry{\textbf{籍贯：}}
-\SimpleEntry{\textbf{邮箱：}}
-\SimpleEntry{\textbf{电话：}}
-\SimpleEntry{\textbf{政治面貌：}}
-\SimpleEntry{\textbf{通讯地址：}}
-\SimpleEntry{\textbf{个人主页：}\href{https://doublelll3.ml}{https://doublelll3.ml}}
+\SimpleEntry{\textbf{籍贯：}陕西省西安市}
+\SimpleEntry{\textbf{邮箱：}339300@whut.edu.cn}
+\SimpleEntry{\textbf{电话：}18202977786}
+\SimpleEntry{\textbf{政治面貌：}中共预备党员}
+\SimpleEntry{\textbf{通讯地址：}湖北省武汉市洪山区武汉理工大学马房山校区东院（430070）}
 
 %************照片**************
-%照片需要放到images文件夹下，名字必须是you.jpg，注意.jpg后缀（可以去resume.cls第101行处修改），如果不需要照片可以不添加此行命令
-%0.15的意思是，照片的宽度是页面宽度的0.15倍，调整大小，避免遮挡文字
-\yourphoto{0.13}
+%\yourphoto{0.13}
 
 %***********教育背景**************
 \section{教育背景}
-%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
-%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
-\datedsubsection{\textbf{xxxx大学}，xxxxx及控制，\textit{硕士}}{2018.9 - 2021.7}
-\datedsubsection{\textbf{xxxx大学}，xxxxxx及控制，\textit{本科}}{2014.9 - 2018.7}
+\datedsubsection{\textbf{武汉理工大学}，测控技术与仪器，\textit{本科}}{2022.9 - 2026.6}
 
 
 %***********实习经历**************
 \section{实习经历}
-\datedsubsection{\textbf{xxxx公司（实习）}，xx工程师}{2020.6 - 2020.9}
+\datedsubsection{\textbf{浙江大学湖州研究院 ART智能空天机器人实验室（科研助理）}，机器人导航算法}{2025.6 - 2025.8}
+{工作内容：研究GNSS拒止环境下小型运载车辆自主导航与控制算法}
 \Content
-{针对xxxx，实时检测xxxx情况（主要负责人）。}
-{研究xxx算法、xxxx算法以及两者的结合。}
-{完成xxxx与xxx的结合，在xxxx，目前已上线使用。}
+{ 针对传统纯跟踪算法在曲率突变路段的跟踪偏移问题，提出基于RRP的优化算法，设计适用于阿克曼底盘的局部规划器，有效消除高曲率路段跟踪误差}
+{ 引入Douglas-Peucker算法进行路径降采样，采用Bezier Curve进行平滑优化，通过连续曲率约束消除路径突变，提升轨迹跟踪精度与行驶平顺性}
+{ 针对复杂室内动态环境，提出基于节点的分布式动态规划方案，在Gazebo仿真中验证有效性，显著提升车辆在动态未知环境中的规划鲁棒性}
 
-\datedsubsection{\textbf{xxx研究院（实习）}，xxxx实习生}{2020.1 - 2020.5}
-\Content
-{负责xxx项目，对xxx进行智能诊断。}
-{搭建xxx网站，结合xxx，利用xxx，基于xxx实现xxx。}
-{1.完成xxx；2.基于xxx，算法准确率在85\%左右。}
-
-\datedsubsection{\textbf{xxx大学研究生课题}，xxx}{2018.3 - 至今}
-\Content
-{针对xxx的不足，研究一种基于xxx对xxx进行xxx的方法。}
-{基于xxx建立xxx模型，使xxx，基于xxx，设计一种xxx。}
-{1.建立了xxx，并在xxx得到了验证；2.对xxx，算法准确率在95\%以上；3.对xxx可以自主学习，从而xxx。}
-
-\datedsubsection{\textbf{大学生创新创业项目}，xxx}{2016.3 - 2017.3}
-\Content
-{针对xxx，基于xxx，加入xx实现了xxx的功能（主要负责人）。}
-{搭建xxx，利用xxx的输出，实现对xxx的控制。}
-{1.实现了xxx；2.获得了xxx奖等荣誉。}
 
 %***********项目经历**************
 \section{项目经历}
-\datedsubsection{\textbf{xxxx（项目）}，xxxx}{2020.6 - 2020.9}
-\Content
-{针对xxxx，实时检测xxxx情况（主要负责人）。}
-{研究xxx算法、xxxx算法以及两者的结合。}
-{完成xxxx与xxx的结合，在xxxx，目前已上线使用。}
+
+
+
+\datedsubsection{\textbf{2024 中国大学生机械工程创新创意大赛机械产品数字化设计赛}，\textbf{国家级一等奖}}{2024.5 - 2024.9}
+{工作内容：多电机耦合软岩软土钻掘布管机器人机构设计与数字化仿真}
+\Contenttwo
+{ 作为项目负责人，完成行星减速器和钻掘机构的理论计算与设计，基于Inventor/SolidWorks进行参数化三维建模、装配及应力仿真，确保关键构件强度满足设计要求}
+{ 基于Blender实现反向动力学约束绑定与运动仿真，制作高质量机构动画；利用Fusion 360衍生式优化设计对承力构件进行拓扑优化，在全国竞赛中获国家级一等奖}
+
+\datedsubsection{\textbf{2024国家级创新创业训练计划}，\textbf{国家级优秀结题}}{2024.3 - 2024.12}
+{工作内容：提出爬壁机器人运动方法，实现Venlo型温室屋顶自主行走、换行与避障}
+\Contenttwo
+{ 作为项目负责人，提出一种新颖的爬壁机器人运动方法，使机器人能在20°-35°的Venlo型屋顶上稳定自主行走与换行，有效解决传统清洁方案在斜面作业中的稳定性问题}
+{ 以第一作者发表EI检索论文 ``Design of Venlo-type Greenhouse Roof Cleaning Robot''（ICMIII 2025）；获发明专利《一种屋顶清洗机器人》（专利号202510500482.5），项目以国家级优秀结题}
+
+\datedsubsection{\textbf{2024 中国机器人大赛暨Robocup机器人世界杯中国赛}，\textbf{国家级三等奖}}{2024.5 - 2024.8}
+{工作内容：立体仓库式码垛AGV小车开发，实现基于视觉的自主导航、路径规划与工件取放}
+\Contenttwo
+{ 负责移动平台运动学解算与底盘控制（STM32），实现差速驱动精确控制；设计仓库码垛任务执行顺序最优决策算法，确保多工件码垛效率最优}
+{ 基于轮式里程计+光电传感器实现融合定位，设计A*全局规划与DWA局部规划相结合的导航方案，在2024全国机器人大赛中获国家级三等奖}
+
+
 
 
 %***********学生工作**************
 \section{学生工作}
 
-\datedsubsection{\textbf{校学生会}，宣传部长，\textit{负责学生会整体宣传策划与执行，统筹多渠道传播运营}}{2023.9 - 2025.6}
+\datedsubsection{\textbf{校党委宣传部}，摄影记者，\textit{负责校内重大活动的摄影及相关新闻的撰写、发表工作}}{2022.9 - 至今}
 
-\datedsubsection{\textbf{校足球队}，队长，\textit{负责队伍日常管理与训练组织，统筹赛事筹备与场上指挥}}{2022.9 - 2026.6}
+\datedsubsection{\textbf{武汉马拉松}，摄影记者，\textit{负责武汉马拉松宣传工作，稿件发表在长江日报等官方媒体}}{2024.2 - 2024.4}
 
-\datedsubsection{\textbf{创新协会}，组织部长，\textit{负责协会活动组织策划与落地执行，统筹跨部门协作与成员管理}}{2023.9 - 2025.6}
 
 %***********个人评价**************
 \section{个人评价}
 
-{CET-6 542分，雅思7.0，能独立进行英文技术交流与文档写作，每周精读英文技术资料3-5篇。}
+{英语水平CET4-557/CET6-461，具备英文技术文献阅读与学术写作能力，以第一作者完成EI检索英文论文写作与发表。}
 
-{主力Python（3年，30k+行），掌握Java、TypeScript，代码规范严格，单元测试覆盖率维持65\%-80\%。}
+{熟练掌握SolidWorks、Inventor、AutoCAD等CAD软件，能独立进行参数化三维建模、机构运动学模拟和应力仿真；具有Blender机构动画制作经验}
 
-{xxx。}
+{具有C++/ROS编程能力，掌握基本数据结构与图搜索算法，能进行移动机器人建图、定位、导航算法的开发与调试；能处理工程实践中的视觉识别任务。}
 
-{xxx}
+{具有嵌入式（C51、STM32）项目开发经验，能独立设计微处理器控制系统，能基于QT开发上位机软件，具备硬件与软件协同开发能力。}
 
-{xxx}
-
-{xxx}
-
-{xxx}
-
-{每周跑步10-15km；维护技术知识库笔记420+条，每月产出技术总结，持续学习成长。}
+{具有极强的摄影功底与审美素养，摄影作品曾发表在《China Daily》；具有极强身体素质，全程马拉松成绩3h14'，铁人三项标准距离完赛。}
 
 \end{document}
-
