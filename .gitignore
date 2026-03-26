@@ -14,4 +14,5 @@
 
 # 个人数据文件（隐私，不提交）
 *.txt
+!promt.txt
 tmp_txt/
